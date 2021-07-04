@@ -38,7 +38,7 @@ def fading():
             g = updateColor(g,STEP)
             setLights(GREEN,g)
         elif g == 255 and b == 0 and r > 0:
-            r = updateColor(r,-STEP)
+            r = updateColor(r, -STEP)
             setLights(RED,r)
         elif r == 0 and g == 255 and b < 255:
             b = updateColor(b, STEP)
@@ -50,7 +50,7 @@ def fading():
             r = updateColor(r,STEP)
             setLights(RED,r)
         elif r == 255 and g == 0 and b > 0:
-            b = setLights(b,-STEP)
+            b = updateColor(b, -STEP)
             setLights(BLUE,b)
     
     time.sleep(0.5)
