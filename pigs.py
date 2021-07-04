@@ -26,6 +26,7 @@ def fading():
     b = 0
     g = 0
     while True:
+        print(str(r) + " " + str(g) + " " + str(b))
         if r == 255 and b == 0 and g < 255:
             g = updateColor(g,STEP)
             setLights(GREEN,g)
