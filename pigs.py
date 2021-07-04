@@ -25,7 +25,7 @@ def fading():
     r = 255
     b = 0
     g = 0
-    while true:
+    while True:
         if r == 255 and b == 0 and g < 255:
             g = updateColor(g,STEP)
             setLights(GREEN,g)
@@ -44,4 +44,5 @@ def fading():
         elif r == 255 and g == 0 and b > 0:
             b = setLights(b,-STEP)
             setLights(BLUE,b)
-    time.sleep(1)
+    
+    time.sleep(0.5)
