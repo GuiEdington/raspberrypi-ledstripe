@@ -21,10 +21,17 @@ def setLights(pin, brightness):
     realBrightness = int(int(brightness) * (float(bright)/255.0))
     pi.set_PWM_dutycycle(pin, realBrightness)
 
+def clear():
+    setLights(RED, 0)
+    setLights(GREEN, 0)
+    setLights(BLUE, 0)
+
 def fading():
+    clear()
     r = 255
     b = 0
     g = 0
+    setLights(RED,255)
     while True:
         print(str(r) + " " + str(g) + " " + str(b))
         if r == 255 and b == 0 and g < 255:
