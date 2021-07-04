@@ -26,6 +26,11 @@ def clear():
     setLights(GREEN, 0)
     setLights(BLUE, 0)
 
+def setRGBLights(r, g, b):
+    setLights(RED,r)
+    setLights(GREEN,g)
+    setLights(BLUE,b)
+
 def fading():
     clear()
     r = 255
@@ -52,5 +57,4 @@ def fading():
         elif r == 255 and g == 0 and b > 0:
             b = updateColor(b, -STEP)
             setLights(BLUE,b)
-    
     time.sleep(0.5)
